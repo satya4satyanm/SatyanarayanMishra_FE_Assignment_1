@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: red;
+    text-align: right;
+    padding: 10px;
+}
+
+nav {
+    background-color: gray;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+li {
+    color: #fff;
+    display: block;
+    float: left;
+    padding: 10px 15px;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+li a {
+    color: #fff;
+}
+
+li:hover {
+    cursor: pointer;
+    background: black;
+}
+
+ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    left: 0;
+    display: none;
+    margin-top: 0.6rem;
+    z-index: 999;
+    box-shadow: coral 2px 2px 2px;
+}
+
+ul li:hover>ul,
+ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+ul li ul li {
+    clear: both;
+    padding: 10px;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: lightgrey;
+}
+
+ul li ul li a {
+    color: darkslateblue;
+}
+
+ul li ul li:hover a {
+    color: white;
+}
+
+span {
+    display: block;
+    clear: both;
+}
+
+
+
+
+/* Bar Graph Vertical */
+.bar-graph .year {
+    -webkit-animation: fade-in-text 2.2s 0.1s forwards;
+    -moz-animation: fade-in-text 2.2s 0.1s forwards;
+    animation: fade-in-text 2.2s 0.1s forwards;
+}
+
+.bar-graph-vertical {
+    background-color: #efefef;
+    padding: 50px;
+}
+
+.bar-graph-vertical .bar-container {
+    float: left;
+    height: 300px;
+    margin-right: 8px;
+    position: relative;
+    text-align: center;
+    width: 40px;
+    background-color: white;
+}
+
+.bar-graph-vertical .bar {
+    border-radius: 3px;
+    bottom: 40px;
+    position: absolute;
+    width: 40px;
+    background-color: lightgrey;
+}
+
+.bar-graph-vertical .year {
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+}
+
+.bar-graph-two .bar::after {
+    -webkit-animation: fade-in-text 2.2s 0.1s forwards;
+    -moz-animation: fade-in-text 2.2s 0.1s forwards;
+    animation: fade-in-text 2.2s 0.1s forwards;
+    color: #fff;
+    content: attr(data-percentage);
+    font-weight: 700;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    text-align: left;
+    top: 24px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.bar-graph-two .bar-one .bar {
+    -webkit-animation: show-bar-one-vertical 1.2s 0.1s forwards;
+    -moz-animation: show-bar-one-vertical 1.2s 0.1s forwards;
+    animation: show-bar-one-vertical 1.2s 0.1s forwards;
+}
+
+.bar-graph-two .bar-two .bar {
+    -webkit-animation: show-bar-two-vertical 1.2s 0.2s forwards;
+    -moz-animation: show-bar-two-vertical 1.2s 0.2s forwards;
+    animation: show-bar-two-vertical 1.2s 0.2s forwards;
+}
+
+.bar-graph-two .bar-three .bar {
+    -webkit-animation: show-bar-three-vertical 1.2s 0.3s forwards;
+    -moz-animation: show-bar-three-vertical 1.2s 0.3s forwards;
+    animation: show-bar-three-vertical 1.2s 0.3s forwards;
+}
+
+
+/* Bar Graph Vertical Animations */
+@-webkit-keyframes show-bar-one-vertical {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 30%;
+    }
+}
+
+@-webkit-keyframes show-bar-two-vertical {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 40%;
+    }
+}
+
+@-webkit-keyframes show-bar-three-vertical {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 80%;
+    }
+}
